@@ -24,7 +24,9 @@ const Hero = () => {
             <button className={styles.primaryBtn}>
               Get Started <FaLongArrowAltRight className={styles.icon} />
             </button>
-            <button className={styles.secondaryBtn}>Learn More</button>
+            <button className={styles.secondaryBtn}>
+              8+ Sorting Algorithms
+            </button>
           </div>
         </div>
       </div>
