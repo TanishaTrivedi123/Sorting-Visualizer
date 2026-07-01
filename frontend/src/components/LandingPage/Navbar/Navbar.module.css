@@ -1,0 +1,93 @@
+.header{
+   background: var(--darkbackground);
+   width: 100%;
+}
+
+.nav{
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+.logo h1{
+    color: var(--yellow);
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.logoimg{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 15px
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    user-select: none;
+}
+
+.buttons button{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 12px;
+}
+
+.login{
+    background: transparent;
+    color: var(--lightbackground);
+    border: 1px solid var(--pink);
+
+    transition: .3s;
+}
+
+.login:hover{
+    background: var(--pink);
+}
+
+.signup{
+    background: var(--pink);
+    color: var(--lightbackground);
+    border: none;
+}
+
+/*  Agar screen ki width 600px ya usse kam hai, tab hi braces {} ke andar wala CSS apply karo. */
+@media(max-width: 600px){
+    .nav{
+        padding: 12px 16px;
+    }
+
+    .logo h1{
+        font-size: 28px;
+    }
+
+    .logoimg{
+        width: 35px;
+        height: 35px;
+    }
+
+    .login{
+        display: none;
+    }
+
+    .signup{
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+}

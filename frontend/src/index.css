@@ -8,3 +8,15 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+/* :root CSS ka top-level element hota hai(<html> hai */
+/* :root {} ke andar jo bhi likhogi, wo poori website me accessible hoga. */
+/* Double hyphen (--) ka matlab hai CSS Variable. yellow naam ka variable banao jiski value #FAD419 hai */
+/* Variable ko use karne ke liye. var(--yellow) ka matlab hai yellow variable ki value le aao */
+:root{
+        --yellow: #FAD419;
+        --pink: #FF8CBC;
+        --darkgreen: #073D30;
+        --lightbackground: #F2ECDC;
+        --darkbackground: #1C1707;
+}
