@@ -1,0 +1,211 @@
+.hero{
+    background: var(--lightbackground);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content{
+    width: 100%;
+    max-width: 600px;
+}
+
+/* left side css */
+
+.leftSide{
+    flex: 0.55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.leftSide h1{
+    max-width: 550px;
+    font-size: 68px;
+    line-height: 1.1;
+    color:#121212;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.leftSide span{
+    color: var(--pink);
+    -webkit-text-stroke: 0.4px #8b0a50;
+}
+
+.leftSide p{
+    width: 100%;
+    max-width: 500px;
+    font-size: 22px;
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.primaryBtn{
+    padding: 18px 38px;
+    border: none;
+    background: var(--darkgreen);
+    color: var(--lightbackground);
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon{
+    font-size: 30px;
+    transition: transform .3s ease;
+}
+
+.primaryBtn:hover .icon{
+    transform: translateX(8px);
+}
+
+.primaryBtn:hover{
+    transform: translateY(-3px);
+}
+
+.secondaryBtn{
+    padding: 18px 38px;
+    border-radius: 40px;
+    border: 1px solid var(--darkbackground);
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.secondaryBtn:hover{
+    background: var(--darkgreen);
+    color: var(--lightbackground)
+}
+
+/* right side css */
+.rightSide{
+    flex: 0.45;
+    min-height: 90vh;
+    background: var(--darkgreen);
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave{
+    position: absolute;
+    top: 0;
+    left: -600px;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    z-index: 1;
+}
+
+.heroImage{
+    position: absolute;
+    width: 100%;
+    border-radius: 23px;
+    z-index: 4;
+    margin-right:20px;
+}
+
+/* ================== Mobile Responsive ==================== */
+@media(max-width: 768px){
+    .hero{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    /* Hide right side completely */
+    .rightSide{
+        display: none;
+    }
+
+    /* Left side takes full width */
+    .leftSide{
+        flex: 1;
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content{
+        max-width: 100%;
+    }
+
+    .leftSide h1{
+        font-size: 44px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .leftSide p{
+        max-width:100%;
+        font-size: 19px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .primaryBtn, .secondaryBtn{
+        width: 240px;
+        justify-content: center;
+    }
+}
+
+/* =========================== MacBook / Small Laptop =========================== */
+
+@media (max-width: 1440px) {
+
+    .leftSide {
+        padding: 0 30px;
+    }
+
+    .leftSide h1 {
+        font-size: 56px;
+    }
+
+    .leftSide p {
+        font-size: 20px;
+        max-width: 450px;
+    }
+
+    .rightSide {
+        min-height: 90vh;
+    }
+
+    .wave {
+        left: -650px;
+    }
+
+    .heroImage {
+        width: 90%;
+        margin-right: 10px;
+    }
+}
