@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    user-select: none;
 }
 
 .content{
@@ -34,7 +35,7 @@
 
 .leftSide span{
     color: var(--pink);
-    -webkit-text-stroke: 0.4px #8b0a50;
+    -webkit-text-stroke: 1px var(--pink);
 }
 
 .leftSide p{
@@ -114,6 +115,7 @@
     object-fit: cover;
     object-position: right center;
     z-index: 1;
+    -webkit-user-drag: none;
 }
 
 .heroImage{
@@ -122,6 +124,7 @@
     border-radius: 23px;
     z-index: 4;
     margin-right:20px;
+    -webkit-user-drag: none;
 }
 
 /* ================== Mobile Responsive ==================== */
