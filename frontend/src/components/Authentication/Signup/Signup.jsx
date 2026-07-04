@@ -6,12 +6,14 @@ import {
   FaEnvelope,
   FaLock,
   FaUser,
-  FaBirthdayCake,
   FaLongArrowAltRight,
 } from "react-icons/fa";
 import { IoCodeSlashSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.fullPage}>
       <div className={styles.container}>
@@ -69,7 +71,7 @@ const Signup = () => {
 
         <div className={styles.rightSide}>
           <div className={styles.signupCard}>
-            <h2>Login to Your Account</h2>
+            <h2>Sign Up</h2>
 
             <p className={styles.subTitle}>
               Fill in the details below to create your account.
@@ -106,22 +108,6 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Date of Birth */}
-
-            <div className={styles.formGroup}>
-              <label htmlFor="dateofbirth">Date of Birth</label>
-
-              <div className={styles.inputBox}>
-                <FaBirthdayCake className={styles.inputIcon} />
-
-                <input
-                  id="dateofbirth"
-                  type="date"
-                  placeholder="Enter your date of birth"
-                />
-              </div>
-            </div>
-
             {/* Password */}
 
             <div className={styles.formGroup}>
@@ -150,7 +136,7 @@ const Signup = () => {
 
             <p className={styles.loginText}>
               Already have an account?
-              <span> Sign in </span>
+              <span onClick={() => navigate("/login")}> Sign in </span>
             </p>
           </div>
         </div>

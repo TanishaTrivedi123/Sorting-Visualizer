@@ -50,7 +50,7 @@
     font-size: 1.2rem;
     line-height: 1.8;
     color: #121212;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 /* ================= Feature Boxes ================= */
@@ -63,7 +63,7 @@
 
 .box {
     display: flex;
-    align-items: flex-start;
+    align-items:center;
     gap: 22px;
 }
 
@@ -115,7 +115,7 @@
 
 .boxContent p {
     font-size: 1.2rem;
-    line-height: 1.7;
+    line-height: 1.4;
     max-width: 300px;
     color: #121212;
 }
@@ -144,6 +144,7 @@
     font-weight: 800;
     color: #121212;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .subTitle {
@@ -151,6 +152,7 @@
     color: #121212;
     margin-bottom: 45px;
     line-height: 1.7;
+    text-align: center;
 }
 
 /* =========================== Form ======================== */
@@ -232,7 +234,7 @@ input[type="password"]::-ms-clear {
 .suggestion {
     display: flex;
     justify-content: flex-start;
-    margin-top: -8px;
+    margin-top: -16px;
     margin-bottom: 30px;
 }
 
@@ -240,7 +242,6 @@ input[type="password"]::-ms-clear {
     color: #777;
     font-size: 0.95rem;
     font-weight: 500;
-    cursor: pointer;
 }
 
 .suggestion span:hover {
@@ -282,7 +283,7 @@ input[type="password"]::-ms-clear {
 /* ====================== Login ======================= */
 
 .loginText {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     font-size: 1.05rem;
     color: #777;

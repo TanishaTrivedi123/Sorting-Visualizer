@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./Login.module.css";
+import { useNavigate } from "react-router-dom";
 import { FaEye, FaListUl, FaEnvelope, FaLock } from "react-icons/fa";
 import { IoCodeSlashSharp } from "react-icons/io5";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.fullPage}>
       <div className={styles.container}>
@@ -109,7 +112,7 @@ const Login = () => {
 
             <p className={styles.signupText}>
               Don't have an account?
-              <span> Sign Up</span>
+              <span onClick={() => navigate("/signup")}> Sign Up</span>
             </p>
           </div>
         </div>

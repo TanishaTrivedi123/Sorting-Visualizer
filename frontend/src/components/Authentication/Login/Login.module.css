@@ -48,9 +48,9 @@
 .description{
     max-width: 430px;
     font-size: 1.2rem;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #121212;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 /* ================= Feature Boxes ================= */
@@ -63,7 +63,7 @@
 
 .box{
     display: flex;
-    align-items: flex-start;
+    align-items:center;
     gap: 22px;
 }
 
@@ -115,7 +115,7 @@
 
 .boxContent p{
     font-size: 1.2rem;
-    line-height: 1.7;
+    line-height: 1.5;
     max-width: 300px;
     color: #121212;
 }
@@ -144,6 +144,7 @@
     font-weight: 800;
     color: #121212;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .subTitle{
@@ -151,6 +152,7 @@
     color: #121212;
     margin-bottom: 45px;
     line-height: 1.7;
+    text-align: center;
 }
 
 /* =========================== Form ======================== */
@@ -288,6 +290,7 @@ input[type="password"]::-ms-clear {
     text-decoration: underline;
 }
 
+/* =========================small phone screen==================== */
 @media (max-width:480px) {
 
     .fullPage {
