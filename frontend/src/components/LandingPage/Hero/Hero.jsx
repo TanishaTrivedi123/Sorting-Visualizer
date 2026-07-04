@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.hero}>
       {/* left side */}
@@ -21,7 +24,10 @@ const Hero = () => {
           </p>
 
           <div className={styles.buttons}>
-            <button className={styles.primaryBtn}>
+            <button
+              onClick={() => navigate("/signup")}
+              className={styles.primaryBtn}
+            >
               Get Started <FaLongArrowAltRight className={styles.icon} />
             </button>
             <button className={styles.secondaryBtn}>
