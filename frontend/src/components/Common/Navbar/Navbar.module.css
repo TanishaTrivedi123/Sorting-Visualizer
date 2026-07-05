@@ -1,0 +1,197 @@
+.header {
+    width: 100%;
+    background: var(--darkbackground);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.50);
+}
+
+.nav {
+    /* background-color: red; */
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+.logo h1 {
+    color: var(--yellow);
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.logoimg {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 15px;
+    -webkit-user-drag: none;
+}
+
+/* center links */
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+
+.link{
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Active underline */
+
+.active {
+    color: var(--yellow);
+}
+
+.rightSection{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile{
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f8c400;
+    border-radius: 50%;
+    color: #3a3333;
+    background: rgb(240, 232, 232);
+    cursor: pointer;
+}
+
+/*  profile hover */
+
+.profile:hover {
+    transform: scale(1.02);
+    border-color: #ffd84d;
+}
+
+/* hamburger */
+
+.menuBtn{
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--lightbackground);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Mobile Drawer */
+
+.mobileMenu{
+    background: var(--darkbackground);
+    position: fixed;
+    right: -260px;
+    width: 240px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    gap: 25px;
+    transition: .35s ease;
+}
+
+/* push user infor to bottom */
+.mobileUser{
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobileProfile{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: #f2f2f2;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        border: 2px solid var(--yellow);
+}
+
+.userDetails h4 {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.userDetails p {
+    color: #cfcfcf;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.showMenu{
+    right: 0;
+}
+
+.mobileLink{
+    text-decoration: none;
+    color: var(--lightbackground);
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: flex;
+    gap: 8px;
+}
+
+.mobileLink:hover {
+    color: var(--yellow);
+}
+
+/* ===================== mobile responsive=================== */
+
+@media(max-width: 768px){
+    .nav{
+        padding: 12px 18px;
+    }
+
+    .navLinks{
+        display: none;
+    }
+
+    .profile{
+        display: none;
+    }
+
+    .menuBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoimg{
+        width:38px;
+        height:38px;
+    }
+}
