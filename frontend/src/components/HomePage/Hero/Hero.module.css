@@ -1,0 +1,301 @@
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero {
+    width: 100%;
+    background: #f5e9f2;
+    padding: 80px 20px 60px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================
+   Hero Content
+=========================== */
+
+.heroContent {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading {
+    font-size: 2.7rem;
+    font-weight: 800;
+    line-height: 1.01;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--pink);
+}
+
+.description {
+    max-width: 650px;
+    margin: auto;
+
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #2f2f2f;
+}
+
+/* ===========================
+   Main Card
+=========================== */
+
+.card {
+    background: #fff;
+
+    border-radius: 28px;
+
+    padding: 42px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+
+    margin-bottom: 55px;
+}
+
+/* ===========================
+   Input Row
+=========================== */
+
+.inputRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.inputBox,
+.selectBox {
+    flex: 1;
+}
+
+.divider {
+    width: 1px;
+    height: 135px;
+    background: #ececec;
+}
+
+/* ===========================
+   Labels
+=========================== */
+
+.label {
+    display: block;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: #171717;
+
+    margin-bottom: 10px;
+}
+
+.helperText {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 22px;
+}
+
+/* ===========================
+   Input
+=========================== */
+
+.input,
+.select {
+    width: 100%;
+    height: 68px;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    font-size: 1.08rem;
+
+    padding: 0 20px;
+
+    transition: .3s ease;
+}
+
+/* Left Input */
+
+.input {
+    border: 2px solid #ff6b95;
+}
+
+.input::placeholder {
+    color: #6f6f6f;
+}
+
+.input:focus {
+    border-color: #ff3f7b;
+    box-shadow: 0 0 0 5px rgba(255, 91, 145, .10);
+}
+
+/* Select */
+
+.select {
+    border: 2px solid #6db4a6;
+    background: white;
+    cursor: pointer;
+}
+
+.select:focus {
+    border-color: #388f7f;
+    box-shadow: 0 0 0 5px rgba(109, 180, 166, .12);
+}
+
+/* ===========================
+   Information Box
+=========================== */
+
+.infoBox {
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border: 1.5px solid #f4cf64;
+    border-radius: 16px;
+
+    background: #fff4db;
+}
+
+.infoBox::before {
+    content: "✦";
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #ffc107;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.infoText {
+    font-size: 1.15rem;
+    color: #1d1d1d;
+    line-height: 1.5;
+}
+
+/* ===========================
+   Button Section
+=========================== */
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    margin-top: 60px;
+}
+
+/* ===========================
+   Visualize Button
+=========================== */
+
+.visualizeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 18px 42px;
+
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: #111;
+
+    background: linear-gradient(135deg, #ffd43b, #ffbe0b);
+
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.visualizeBtn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 30px rgba(255, 193, 7, 0.45);
+}
+
+.visualizeBtn:active {
+    transform: scale(0.98);
+}
+
+/* Button Icons */
+
+.buttonIcon {
+    font-size: 1.25rem;
+}
+
+.arrowIcon {
+    font-size: 1.35rem;
+
+    transition: 0.3s ease;
+}
+
+.visualizeBtn:hover .arrowIcon {
+    transform: translateX(6px);
+}
+
+/* ===========================
+   Clear Button
+=========================== */
+
+.clearBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 18px 36px;
+
+    border: 2px solid #ebe87f;
+    border-radius: 14px;
+
+    background: white;
+
+    font-size: 1.08rem;
+    font-weight: 600;
+
+    color: #111;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.clearBtn:hover {
+    background: #fff8b0;
+
+    border-color: var(--yellow);
+}
