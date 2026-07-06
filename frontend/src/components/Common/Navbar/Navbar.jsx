@@ -32,7 +32,7 @@ const Navbar = () => {
             <span>Home</span>
           </NavLink>
           <NavLink
-            to="/algorithm"
+            to="/algorithms"
             className={({ isActive }) =>
               isActive ? `${styles.active} ${styles.link}` : styles.link
             }
