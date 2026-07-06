@@ -1,0 +1,271 @@
+.section {
+    width: 100%;
+    padding: 40px 0 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+    background: #f4ecef;
+    border-radius: 26px;
+    padding: 38px 42px;
+
+    border: 1px solid #f7e7ec;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+/* ---------------- Left Icon ---------------- */
+
+.ideaBox {
+    flex-shrink: 0;
+    transform: translateY(-80px);
+}
+
+.ideaCircle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    background: #ebced9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ff5c93;
+    font-size: 2.8rem;
+
+    box-shadow: 0 10px 30px rgba(255, 110, 160, 0.15);
+}
+
+/* ---------------- Step ---------------- */
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    flex: 1;
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.pink {
+    background: linear-gradient(135deg, #ff5b95, #ff7aa7);
+}
+
+.yellow {
+    background: linear-gradient(135deg, #ffbf00, #ffc928);
+}
+
+.green {
+    background: linear-gradient(135deg, #003b2e, #0b5a48);
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.08rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------------- Arrow ---------------- */
+
+.arrowCircle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    background: #f4ecef;
+    border: 1px solid #ececec;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #bdbdbd;
+    font-size: 1rem;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 1);
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width:768px) {
+
+    .section {
+        padding: 35px 15px 60px;
+    }
+
+    .container {
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    /* Desktop bulb aur arrows hide */
+    .ideaBox,
+    .arrowCircle {
+        display: none;
+    }
+
+    .step {
+        width: 100%;
+        max-width: 340px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding: 28px 22px;
+        gap: 16px;
+
+        border-radius: 20px;
+    }
+
+    /* Step 1 */
+    .step:nth-child(2) {
+        background: #f0e7ea;
+        border: 1px solid #f7d7e2;
+    }
+
+    /* Step 2 */
+    .step:nth-child(4) {
+        background: #f9f2e1;
+        border: 1px solid #f7e1a0;
+    }
+
+    /* Step 3 */
+    .step:nth-child(6) {
+        background: #e1f3ed;
+        border: 1px solid #dce7e2;
+    }
+
+    .number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+    }
+
+    .content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+}
+
+/* ================= Tablet ================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .container {
+        background: transparent;
+        border: none;
+        padding: 0 20px;
+    }
+
+    .steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .ideaBox,
+    .arrowCircle {
+        display: none;
+    }
+
+    .step {
+
+        width: calc(50% - 15px);
+        max-width: 340px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        gap: 16px;
+        padding: 28px 22px;
+
+        border-radius: 20px;
+    }
+
+    /* Third card center */
+    .step:last-child {
+        width: 340px;
+    }
+
+    /* Same colour theme */
+
+    .step:nth-child(2) {
+        background: #f0e7ea;
+        border: 1px solid #f7d7e2;
+    }
+
+    .step:nth-child(4) {
+        background: #f9f2e1;
+        border: 1px solid #f7e1a0;
+    }
+
+    .step:nth-child(6) {
+        background: #e1f3ed;
+        border: 1px solid #dce7e2;
+    }
+
+}
