@@ -34,9 +34,10 @@
 .heading{
     font-size: 3rem;
     line-height: 1.15;
-    font-weight: 800;
+    font-weight: 700;
     color: #121212;
     margin-bottom: 25px;
+    font-family: "Inter", sans-serif;
 }
 
 .heading span{
@@ -47,10 +48,11 @@
 
 .description{
     max-width: 430px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: #121212;
     margin-bottom: 40px;
+    font-family: "Inter", sans-serif;
 }
 
 /* ================= Feature Boxes ================= */
@@ -107,17 +109,19 @@
 }
 
 .boxContent h3{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 8px;
     color: #121212;
+    font-family: "Inter", sans-serif;
 }
 
 .boxContent p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     max-width: 300px;
     color: #121212;
+    font-family: "Inter", sans-serif;
 }
 
 /* ===========================right side======================== */
@@ -141,18 +145,20 @@
 
 .loginCard h2{
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #121212;
     margin-bottom: 12px;
     text-align: center;
+    font-family: "Inter", sans-serif;
 }
 
 .subTitle{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #121212;
     margin-bottom: 45px;
     line-height: 1.7;
     text-align: center;
+    font-family: "Inter", sans-serif;
 }
 
 /* =========================== Form ======================== */
@@ -167,6 +173,7 @@
     font-weight: 700;
     margin-bottom: 12px;
     color: #121212;
+    font-family: "Inter", sans-serif;
 }
 
 /* ============================ Input ========================= */
@@ -199,6 +206,7 @@
     background: transparent;
     font-size: 1rem;
     color: #121212;
+    font-family: "Inter", sans-serif;
 }
 
 /* Chrome Autofill Fix */
@@ -244,6 +252,7 @@ input[type="password"]::-ms-clear {
     font-weight: 500;
     cursor: pointer;
     -webkit-text-stroke: 1px var(--pink);
+    font-family: "Inter", sans-serif;
 }
 
 .forgotPassword span:hover {
@@ -263,6 +272,7 @@ input[type="password"]::-ms-clear {
     font-weight: 700;
     cursor: pointer;
     transition: .3s;
+    font-family: "Inter", sans-serif;
 }
 
 .loginBtn:hover {
@@ -277,6 +287,7 @@ input[type="password"]::-ms-clear {
     text-align: center;
     font-size: 1.05rem;
     color: #777;
+    font-family: "Inter", sans-serif;
 }
 
 .signupText span {
