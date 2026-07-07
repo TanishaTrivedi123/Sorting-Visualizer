@@ -16,11 +16,12 @@
 }
 
 .heading {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.9rem;
+    font-weight: 600;
     color: #111;
     margin-bottom: 45px;
     text-align: center;
+    font-family: "Inter", sans-serif;
 }
 
 .steps {
@@ -77,6 +78,7 @@
     font-weight: 700;
 
     flex-shrink: 0;
+    font-family: "Inter", sans-serif;
 }
 
 .pink {
@@ -92,16 +94,18 @@
 }
 
 .content h3 {
-    font-size: 1.25rem;
+    font-size: 1.19rem;
     font-weight: 700;
     color: #111;
     margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 .content p {
-    font-size: 1.08rem;
+    font-size: 1.01rem;
     color: #333;
     line-height: 1.6;
+    font-family: "Inter", sans-serif;
 }
 
 /* ---------------- Arrow ---------------- */

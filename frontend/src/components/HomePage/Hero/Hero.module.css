@@ -29,6 +29,7 @@
     line-height: 1.01;
     color: #111;
     margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
 }
 
 .heading span {
@@ -41,9 +42,10 @@
     max-width: 650px;
     margin: auto;
 
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     line-height: 1.7;
     color: #2f2f2f;
+    font-family: "Inter", sans-serif;
 }
 
 /* ===========================
@@ -96,12 +98,14 @@
     color: #171717;
 
     margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 .helperText {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 22px;
+    font-family: "Inter", sans-serif;
 }
 
 /* ===========================
@@ -122,6 +126,7 @@
     padding: 0 20px;
 
     transition: .3s ease;
+    font-family: "Inter", sans-serif;
 }
 
 /* Left Input */
@@ -132,6 +137,7 @@
 
 .input::placeholder {
     color: #6f6f6f;
+    font-family: "Inter", sans-serif;
 }
 
 .input:focus {
@@ -171,6 +177,7 @@
     border-radius: 16px;
 
     background: #fff4db;
+    font-family: "Inter", sans-serif;
 }
 
 .infoBox::before {
@@ -198,6 +205,7 @@
     font-size: 1.15rem;
     color: #1d1d1d;
     line-height: 1.5;
+    font-family: "Inter", sans-serif;
 }
 
 /* ===========================
@@ -240,6 +248,7 @@
     box-shadow: 0 10px 25px rgba(255, 193, 7, 0.35);
 
     transition: 0.3s ease;
+    font-family: "Inter", sans-serif;
 }
 
 .visualizeBtn:hover {
@@ -292,6 +301,7 @@
     cursor: pointer;
 
     transition: .3s ease;
+    font-family: "Inter", sans-serif;
 }
 
 .clearBtn:hover {
