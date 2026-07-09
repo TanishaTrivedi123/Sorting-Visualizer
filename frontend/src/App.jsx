@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import ExploreAlgorithmPage from "./pages/ExploreAlgorithmPage";
 import MyProfilePage from "./pages/MyProfilePage";
+import VisualizationPage from "./pages/VisualizationPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/sorting" element={<HomePage />} />
         <Route path="/algorithms" element={<ExploreAlgorithmPage />} />
         <Route path="/my-profile" element={<MyProfilePage />} />
+        <Route path="/sort-visualization" element={<VisualizationPage />} />
       </Routes>
     </div>
   );
