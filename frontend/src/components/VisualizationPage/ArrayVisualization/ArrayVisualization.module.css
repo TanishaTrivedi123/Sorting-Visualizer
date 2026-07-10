@@ -1,0 +1,212 @@
+.visualizationContainer {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 15px rgba(216, 134, 213, 0.9);
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.heading svg {
+    font-size: 1.5rem;
+    color: var(--pink);
+}
+
+.heading h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--darkbackground);
+}
+
+.graphContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
+
+    height: 270px;
+    padding: 0 2rem;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.graphContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.barWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+
+.value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--darkbackground);
+}
+
+.bar {
+    width: 76px;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.35s ease;
+}
+
+.normalBar {
+    background: linear-gradient(180deg,
+            #9bd7c3 0%,
+            #8ecfb9 100%);
+    border: 1px solid #79c0aa;
+}
+
+.comparingBar {
+    background: linear-gradient(180deg,
+            #ffd96a 0%,
+            #ffc94b 100%);
+    border: 1px solid #f2bb30;
+}
+
+.currentBar {
+    background: linear-gradient(180deg,
+            #ff7ca8 0%,
+            #ff5d91 100%);
+    border: 1px solid #ff3d7b;
+}
+
+.bar:hover {
+    transform: translateY(-4px);
+}
+
+.index {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* =========================
+   Tablet (992px and below)
+========================= */
+
+@media (max-width: 992px) {
+
+    .visualizationContainer {
+        padding: 1.4rem;
+    }
+
+    .heading {
+        margin-bottom: 1.5rem;
+    }
+
+    .heading h3 {
+        font-size: 1.5rem;
+    }
+
+    .graphContainer {
+        justify-content: flex-start;
+        gap: 0.7rem;
+        padding: 0 0.8rem;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE */
+    }
+
+    .graphContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .barWrapper {
+        flex-shrink: 0;
+    }
+
+    .bar {
+        width: 52px;
+    }
+
+    .value {
+        font-size: 1.1rem;
+    }
+
+    .index {
+        font-size: 1rem;
+    }
+}
+
+
+/* =========================
+   Mobile (768px and below)
+========================= */
+
+@media (max-width: 768px) {
+
+    .visualizationContainer {
+        padding: 1rem;
+        border-radius: 18px;
+    }
+
+    .heading {
+        justify-content: center;
+        margin-bottom: 1.2rem;
+    }
+
+    .heading h3 {
+        font-size: 1.3rem;
+    }
+
+    .heading svg {
+        font-size: 1.25rem;
+    }
+
+    .graphContainer {
+        height: 210px;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding: 0 0.4rem;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .graphContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .barWrapper {
+        flex-shrink: 0;
+        gap: 0.5rem;
+    }
+
+    .bar {
+        width: 38px;
+    }
+
+    .value {
+        font-size: 0.9rem;
+    }
+
+    .index {
+        font-size: 0.85rem;
+    }
+}

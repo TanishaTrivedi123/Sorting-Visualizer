@@ -15,7 +15,7 @@ html, body{
 /* Variable ko use karne ke liye. var(--yellow) ka matlab hai yellow variable ki value le aao */
 :root{
         --yellow: #FAD419;
-        --pink: #FF8CBC;
+        --pink: #ff2f68;
         --darkgreen: #073D30;
         --lightbackground: #F2ECDC;
         --darkbackground: #1C1707;
