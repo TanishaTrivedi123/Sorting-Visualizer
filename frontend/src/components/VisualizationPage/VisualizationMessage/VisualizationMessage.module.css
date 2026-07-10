@@ -1,0 +1,63 @@
+.messageContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    width: 100%;
+
+    padding: 1.3rem 1.5rem;
+
+    background: #fff4db;
+
+    border: 1px solid rgba(250, 212, 25, 0.75);
+    border-radius: 16px;
+
+    box-sizing: border-box;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: linear-gradient(180deg, #ffd95c 0%, #ffc62b 100%);
+    color: #ffffff;
+
+    box-shadow: 0 4px 10px rgba(250, 212, 25, 0.25);
+}
+
+.icon svg {
+    font-size: 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.title {
+    margin: 0;
+
+    color: var(--darkbackground);
+
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.description {
+    margin: 0;
+
+    color: #2d2d2d;
+
+    font-size: 1.12rem;
+    font-weight: 400;
+    line-height: 1.5;
+}

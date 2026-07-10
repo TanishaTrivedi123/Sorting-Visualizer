@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Hero.module.css";
 import { FaMagic, FaArrowRight } from "react-icons/fa";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";

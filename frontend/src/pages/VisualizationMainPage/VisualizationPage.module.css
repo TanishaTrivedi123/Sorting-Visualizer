@@ -1,0 +1,22 @@
+.page {
+    min-height: 100vh;
+    padding: 1.5rem;
+
+    background: #f5e9f2;
+}
+
+.main {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+
+    background: #fff;
+    border-radius: 24px;
+
+    /* Height mat do */
+    /* overflow mat do */
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+}

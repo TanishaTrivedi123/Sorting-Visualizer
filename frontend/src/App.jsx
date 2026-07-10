@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import ExploreAlgorithmPage from "./pages/ExploreAlgorithmPage";
 import MyProfilePage from "./pages/MyProfilePage";
-import VisualizationPage from "./pages/VisualizationPage";
+import VisualizationPage from "./pages/VisualizationMainPage/VisualizationPage";
 
 const App = () => {
   return (
