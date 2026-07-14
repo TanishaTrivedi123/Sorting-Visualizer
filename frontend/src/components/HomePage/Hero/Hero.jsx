@@ -3,6 +3,7 @@ import styles from "./Hero.module.css";
 import { FaArrowRight } from "react-icons/fa";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { GiAnticlockwiseRotation } from "react-icons/gi";
+import bubbleSort from "../../../algorithms/bubbleSort";
 
 const Hero = () => {
   const [error, setError] = useState("");
@@ -35,6 +36,9 @@ const Hero = () => {
 
     console.log(arr);
     console.log(algo);
+
+    const data = bubbleSort(arr);
+    console.log(data);
   };
 
   return (
