@@ -1,10 +1,42 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Hero.module.css";
-import { FaMagic, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { GiAnticlockwiseRotation } from "react-icons/gi";
 
 const Hero = () => {
+  const [error, setError] = useState("");
+  const inputRef = useRef();
+  const algoRef = useRef();
+
+  // take the input and algo and save it to the redux
+  const handleClick = () => {
+    const input = inputRef.current.value.trim();
+    const algo = algoRef.current.value;
+
+    if (!input) {
+      setError("Please enter an array.");
+      return;
+    }
+
+    if (!algo) {
+      setError("Please select an algorithm.");
+      return;
+    }
+
+    const regex = /^\d+(?:,\s?\d+|\s\d+)*$/;
+
+    if (!regex.test(input)) {
+      setError("Enter valid numbers separated by commas and spaces.");
+      return;
+    }
+
+    const arr = input.split(/,\s?|\s/).map(Number);
+
+    console.log(arr);
+    console.log(algo);
+  };
+
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -38,9 +70,10 @@ const Hero = () => {
               </p>
 
               <input
+                ref={inputRef}
                 type="text"
                 id="input-array"
-                placeholder="e.g. 5, 3, 8, 1, 2"
+                placeholder="e.g. 5, 3, 8, 1, 2 or 5 3 8 1 2"
                 className={styles.input}
               />
             </div>
@@ -56,16 +89,26 @@ const Hero = () => {
 
               <p className={styles.helperText}>Choose any sorting algorithm</p>
 
-              <select className={styles.select}>
-                <option>Select an algorithm</option>
-                <option>Bubble Sort</option>
-                <option>Selection Sort</option>
-                <option>Insertion Sort</option>
-                <option>Merge Sort</option>
-                <option>Quick Sort</option>
+              <select ref={algoRef} defaultValue="" className={styles.select}>
+                <option value="" disabled>
+                  Select an algorithm
+                </option>
+                <option value="Bubble Sort">Bubble Sort</option>
+                <option value="Selection Sort">Selection Sort</option>
+                <option value="Insertion Sort">Insertion Sort</option>
+                <option value="Merge Sort">Merge Sort</option>
+                <option value="Quick Sort">Quick Sort</option>
               </select>
             </div>
           </div>
+
+          <p
+            className={`${styles.errorMessage} ${
+              error ? styles.showError : ""
+            }`}
+          >
+            {error}
+          </p>
 
           {/* ================= Info Box ================= */}
 
@@ -79,7 +122,7 @@ const Hero = () => {
         {/* ================= Buttons ================= */}
 
         <div className={styles.buttonContainer}>
-          <button className={styles.visualizeBtn}>
+          <button className={styles.visualizeBtn} onClick={handleClick}>
             <HiMiniBars3BottomLeft className={styles.buttonIcon} />
 
             <span>Visualize Sorting</span>

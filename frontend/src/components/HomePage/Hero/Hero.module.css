@@ -79,6 +79,21 @@
     flex: 1;
 }
 
+.errorMessage {
+  display: none;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #d32f2f;
+  background-color: #fdecea;
+  border: 1px solid #f5c2c7;
+}
+
+.showError {
+  display: block;
+}
+
 .divider {
     width: 1px;
     height: 135px;
