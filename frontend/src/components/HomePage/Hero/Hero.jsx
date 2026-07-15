@@ -1,14 +1,19 @@
 import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import styles from "./Hero.module.css";
 import { FaArrowRight } from "react-icons/fa";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { GiAnticlockwiseRotation } from "react-icons/gi";
 import bubbleSort from "../../../algorithms/bubbleSort";
+import { setSortingData } from "../../../redux/slices/sortingSlice";
 
 const Hero = () => {
   const [error, setError] = useState("");
   const inputRef = useRef();
   const algoRef = useRef();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // take the input and algo and save it to the redux
   const handleClick = () => {
@@ -32,13 +37,24 @@ const Hero = () => {
       return;
     }
 
+    // String onverted to array
     const arr = input.split(/,\s?|\s/).map(Number);
 
-    console.log(arr);
-    console.log(algo);
-
     const data = bubbleSort(arr);
-    console.log(data);
+
+    dispatch(
+      setSortingData({
+        algorithm: algo,
+        inputArr: arr,
+        steps: data,
+      }),
+    );
+
+    // console.log(arr);
+    // console.log(algo);
+    // console.log(data);
+
+    navigate("/sort-visualization");
   };
 
   return (

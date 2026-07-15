@@ -1,9 +1,10 @@
 import React from "react";
 import { HiMiniChartBar } from "react-icons/hi2";
 import styles from "./ArrayVisualization.module.css";
+import { useSelector } from "react-redux";
 
 const ArrayVisualization = () => {
-  const array = [5, 3, 8, 1, 2, 7, 4, 6];
+  const array = useSelector((state) => state.sortArr.inputArr);
 
   const currentIndex = 5;
   const comparingIndex = 4;

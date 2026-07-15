@@ -1,8 +1,12 @@
 import React from "react";
 import { HiSparkles } from "react-icons/hi2";
 import styles from "./VisualizationMessage.module.css";
+import { useSelector } from "react-redux";
 
 const VisualizationMessage = () => {
+  const line1 = useSelector((state) => state.sortArr.steps.steps[0]?.line1);
+  const line2 = useSelector((state) => state.sortArr.steps.steps[0]?.line2);
+
   return (
     <section className={styles.messageContainer}>
       <div className={styles.icon}>
@@ -10,9 +14,9 @@ const VisualizationMessage = () => {
       </div>
 
       <div className={styles.content}>
-        <h3 className={styles.title}>Comparing 2 and 7</h3>
+        <h3 className={styles.title}>{line1}</h3>
 
-        <p className={styles.description}>Since 2 &lt; 7, no swap needed.</p>
+        <p className={styles.description}>{line2}</p>
       </div>
     </section>
   );

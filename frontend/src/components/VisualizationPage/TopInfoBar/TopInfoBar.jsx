@@ -1,11 +1,12 @@
 import React from "react";
 import { FiRotateCcw } from "react-icons/fi";
 import styles from "./TopInfoBar.module.css";
+import { useSelector } from "react-redux";
 
 const TopInfoBar = () => {
-  const algorithm = "Bubble Sort";
-
-  const array = [5, 3, 8, 1, 2, 7, 4, 6];
+  const algorithm = useSelector((state) => state.sortArr.algorithm);
+  const array = useSelector((state) => state.sortArr.inputArr);
+  const arrSize = useSelector((state) => state.sortArr.steps.arrLength);
 
   return (
     <section className={styles.topInfoBar}>

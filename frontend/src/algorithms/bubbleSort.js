@@ -8,7 +8,7 @@ const bubbleSort = (inputArr) => {
 
     for(let i = 0; i<n-1; i++){
 
-        for(let j = 0; j<n-1; j++){
+        for(let j = 0; j<n-i-1; j++){
             
             const isSwap = arr[j] > arr[j+1];
 
@@ -46,7 +46,7 @@ const bubbleSort = (inputArr) => {
             title: `Step ${stepNumber}`,
             line1: `End of Pass ${i + 1}`,
             line2: `${arr[n - i - 1]} is now in its correct position.`,
-            status: `${arr[arr.length - 1]} is in place`,
+            status: `${arr[n - i - 1]} is in place`,
             success: true
         })
 
