@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Hero.module.css";
 import { FaArrowRight } from "react-icons/fa";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { GiAnticlockwiseRotation } from "react-icons/gi";
 import bubbleSort from "../../../algorithms/bubbleSort";
 import { setSortingData } from "../../../redux/slices/sortingSlice";
 
@@ -148,11 +147,6 @@ const Hero = () => {
             <span>Visualize Sorting</span>
 
             <FaArrowRight className={styles.arrowIcon} />
-          </button>
-
-          <button className={styles.clearBtn}>
-            <GiAnticlockwiseRotation className={styles.clearIcon} />
-            <span>Clear</span>
           </button>
         </div>
       </div>
