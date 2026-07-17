@@ -4,8 +4,9 @@ import styles from "./VisualizationMessage.module.css";
 import { useSelector } from "react-redux";
 
 const VisualizationMessage = () => {
-  const line1 = useSelector((state) => state.sortArr.steps.steps[0]?.line1);
-  const line2 = useSelector((state) => state.sortArr.steps.steps[0]?.line2);
+  const steps = useSelector((state) => state.sortArr.steps.steps);
+  const currStep = useSelector((state) => state.sortArr.steps.currStep);
+  const currStepData = steps[currStep - 1];
 
   return (
     <section className={styles.messageContainer}>
@@ -14,9 +15,9 @@ const VisualizationMessage = () => {
       </div>
 
       <div className={styles.content}>
-        <h3 className={styles.title}>{line1}</h3>
+        <h3 className={styles.title}>{currStepData?.line1}</h3>
 
-        <p className={styles.description}>{line2}</p>
+        <p className={styles.description}>{currStepData?.line2}</p>
       </div>
     </section>
   );

@@ -1,12 +1,14 @@
 import React from "react";
 import { FiRotateCcw } from "react-icons/fi";
 import styles from "./TopInfoBar.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { resetVisualization } from "../../../redux/slices/sortingSlice";
 
 const TopInfoBar = () => {
   const algorithm = useSelector((state) => state.sortArr.algorithm);
   const array = useSelector((state) => state.sortArr.inputArr);
   const arrSize = useSelector((state) => state.sortArr.steps.arrLength);
+  const dispatch = useDispatch();
 
   return (
     <section className={styles.topInfoBar}>
@@ -25,7 +27,10 @@ const TopInfoBar = () => {
         <span className={styles.value}>{array.length}</span>
       </div>
 
-      <button className={styles.resetBtn}>
+      <button
+        onClick={() => dispatch(resetVisualization())}
+        className={styles.resetBtn}
+      >
         <FiRotateCcw />
         <span>Reset Visualization</span>
       </button>

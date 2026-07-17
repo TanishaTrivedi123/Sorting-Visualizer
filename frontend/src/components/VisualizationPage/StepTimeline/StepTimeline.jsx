@@ -2,12 +2,18 @@ import React from "react";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import styles from "./StepTimeline.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { nextStep, previousStep } from "../../../redux/slices/sortingSlice";
 
 const StepTimeline = () => {
+  const dispatch = useDispatch();
+
   const steps = useSelector((state) => state.sortArr.steps.steps);
   const currentStep = useSelector((state) => state.sortArr.steps.currStep);
   const totalSteps = useSelector((state) => state.sortArr.steps.totalSteps);
+  const currStep = useSelector((state) => state.sortArr.steps.currStep);
+
+  const progress = (currStep / totalSteps) * 100;
 
   return (
     <section className={styles.timeline}>
@@ -20,7 +26,7 @@ const StepTimeline = () => {
         {steps.map((step) => (
           <div
             key={`${step.id}`}
-            className={`${styles.card} ${step.active ? styles.activeCard : ""}`}
+            className={`${styles.card} ${currentStep === step.id ? styles.activeCard : ""}`}
           >
             <h4>{step.title}</h4>
 
@@ -42,20 +48,26 @@ const StepTimeline = () => {
       </div>
 
       <div className={styles.progress}>
-        <div className={styles.progressFill}></div>
+        <div
+          className={styles.progressFill}
+          style={{ width: `${progress}%` }}
+        ></div>
       </div>
 
       <div className={styles.controls}>
-        <button className={styles.prevBtn}>
+        <button
+          onClick={() => dispatch(previousStep())}
+          className={styles.prevBtn}
+        >
           <FaArrowLeft />
           <span>Previous Step</span>
         </button>
 
         <p className={styles.stepCounter}>
-          Step <span>{currentStep}</span> of {totalSteps}
+          Step <span>{currStep}</span> of {totalSteps}
         </p>
 
-        <button className={styles.nextBtn}>
+        <button onClick={() => dispatch(nextStep())} className={styles.nextBtn}>
           <span>Next Step</span>
           <FaArrowRight />
         </button>
