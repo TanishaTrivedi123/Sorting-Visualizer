@@ -6,7 +6,14 @@ const db = require("./db")
 const app = express();
 db()
 
+// middleware
+app.use(express.json())
+
 const PORT = process.env.PORT || 8000;
+
+// signup route
+const signupRoute = require("./routes/SignRoute")
+app.use("/api", signupRoute);
 
 app.get("/", (req,res) => {
     res.send("Radhe Radhe. Jai shree krishn");
