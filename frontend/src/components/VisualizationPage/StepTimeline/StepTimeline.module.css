@@ -50,7 +50,7 @@
 
 .activeCard {
     border: 1px solid var(--pink);
-    background: #fff8fa;
+    background: #f5d7e0;
 }
 
 .card h4 {
@@ -92,14 +92,12 @@
 }
 
 .progressFill {
-    width: 17%;
     height: 100%;
-
     background: linear-gradient(90deg,
             #ff3d72,
             #ff7ea9);
-
     border-radius: 20px;
+    transition: width 0.35s ease;
 }
 
 .controls {

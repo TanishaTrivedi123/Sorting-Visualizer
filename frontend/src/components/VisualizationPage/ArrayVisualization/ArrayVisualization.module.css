@@ -31,7 +31,7 @@
     align-items: flex-end;
     gap: 1rem;
 
-    height: 270px;
+    height: 280px;
     padding: 0 2rem;
 
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
@@ -81,11 +81,12 @@
     border: 1px solid #f2bb30;
 }
 
-.currentBar {
+.sortedBar {
     background: linear-gradient(180deg,
-            #ff7ca8 0%,
-            #ff5d91 100%);
-    border: 1px solid #ff3d7b;
+            #62d26f 0%,
+            #2fb344 100%);
+
+    border: 1px solid #24963a;
 }
 
 .bar:hover {

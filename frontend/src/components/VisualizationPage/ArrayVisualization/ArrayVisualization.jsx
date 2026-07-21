@@ -1,14 +1,14 @@
 import React from "react";
 import { HiMiniChartBar } from "react-icons/hi2";
 import styles from "./ArrayVisualization.module.css";
+import { useSelector } from "react-redux";
 
 const ArrayVisualization = () => {
-  const array = [5, 3, 8, 1, 2, 7, 4, 6];
+  const steps = useSelector((state) => state.sortArr.steps.steps);
+  const currStep = useSelector((state) => state.sortArr.steps.currStep);
+  const currStepData = steps[currStep - 1];
 
-  const currentIndex = 5;
-  const comparingIndex = 4;
-
-  const maxValue = Math.max(...array);
+  const maxValue = Math.max(...currStepData.array);
 
   return (
     <section className={styles.visualizationContainer}>
@@ -18,20 +18,20 @@ const ArrayVisualization = () => {
       </div>
 
       <div className={styles.graphContainer}>
-        {array.map((value, index) => (
+        {currStepData.array.map((value, index) => (
           <div key={index} className={styles.barWrapper}>
             <span className={styles.value}>{value}</span>
 
             <div
               className={`
                 ${styles.bar}
-                ${
-                  index === currentIndex
-                    ? styles.currentBar
-                    : index === comparingIndex
-                      ? styles.comparingBar
-                      : styles.normalBar
-                }
+                 ${
+                   currStepData.sortedIndexes.includes(index)
+                     ? styles.sortedBar
+                     : currStepData.compareIndexes.includes(index)
+                       ? styles.comparingBar
+                       : styles.normalBar
+                 }
               `}
               style={{
                 height: `${(value / maxValue) * 200}px`,
