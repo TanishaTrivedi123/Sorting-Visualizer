@@ -14,7 +14,7 @@ const forgotPass = async(req,res) => {
 
         const token = jwt.sign(
             {id: user._id},
-            process.env.SECRET_KEY,
+            process.env.JWT_SECRET_KEY,
             {expiresIn: "10m"}
         )
 
@@ -26,7 +26,7 @@ const forgotPass = async(req,res) => {
             `Click this link to reset password:\n${resetLink}`
         )
 
-        res.status(200).json({message: "Reset link sent successfully"})
+        res.status(200).json({message: "Reset link sent successfully", token})
     }
     catch(error){
         console.log(error);

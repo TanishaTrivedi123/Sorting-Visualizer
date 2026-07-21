@@ -23,6 +23,10 @@ app.use("/api", loginRoute);
 const forgotPassRoute = require("./routes/forgotPasswordRoute")
 app.use("/api", forgotPassRoute)
 
+// reset password route
+const resetPassRoute = require("./routes/ResetPasswordRoute");
+app.use("/api", resetPassRoute);
+
 app.get("/", (req,res) => {
     res.send("Radhe Radhe. Jai shree krishn");
 })

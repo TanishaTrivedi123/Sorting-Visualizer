@@ -20,8 +20,8 @@ const signupLogic = async (req,res) => {
 
         const token = jwt.sign(
             {email},
-            process.env.SECRET_KEY,
-            {expiresIn: "2000s"}
+            process.env.JWT_SECRET_KEY,
+            {expiresIn: "1h"}
         )
 
         const newUser = new User({
